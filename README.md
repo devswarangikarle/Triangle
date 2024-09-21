@@ -9,6 +9,8 @@ def recursion(l,x,y,ans=0):
     ans += l[x][y]
     mx = min(recursion(l,x+1,y,ans),recursion(l,x+1,y+1,ans))
     return mx
+    
 class Solution:
+
     def minimumTotal(self, triangle: List[List[int]]) -> int:
         return recursion(triangle,0,0,0)
